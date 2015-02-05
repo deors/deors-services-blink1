@@ -7,7 +7,7 @@ running them through the native interface library.
 Endpoints
 ---------
 
-/fadeToRGB?color=RRGGBB&time=n.m&backToBlack=true|false&fastBack=true|false&fastBack
+/fadeToRGB?color=RRGGBB&time=n.m&backToBlack=true|false&fastBack=true|false
 
     Makes the blink(1) to fade from current color to RRGGBB in given time (in seconds).
     If backToBlack is true, it waits for the given time and then fades back to black.
