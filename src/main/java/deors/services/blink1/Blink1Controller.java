@@ -46,12 +46,16 @@ public class Blink1Controller {
         Color color = Color.decode(rgbHexColor);
         int timems = (int) (time * 1000);
 
+        logger.debug("opening blink(1) device 0");
         blink1 = Blink1.open();
+        logger.debug("asking blink(1) to fade to color: " + color);
         blink1.fadeToRGB(timems, color.getRed(), color.getGreen(), color.getBlue());
         if (backToBlack) {
+            logger.debug("fading blink(1) back to black");
             Blink1.pause(timems);
             blink1.fadeToRGB(fastBack ? timems / 2 : timems, 0, 0, 0);
         }
+        logger.debug("closing blink(1) device 0");
         blink1.close();
     }
 }
