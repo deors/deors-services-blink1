@@ -33,8 +33,8 @@ public class Blink1Controller {
             Callable<Object> task =
                 Executors.callable(() -> playFadeToRGB(rgbHexColor, time, backToBlack, fastBack));
             task.call();
-        } catch (Exception e) {
-            logger.error("playFadeToRGB task did not complete successfully", e);
+        } catch (Throwable t) {
+            logger.error("playFadeToRGB task did not complete successfully", t);
             return Blink1Status.ERROR;
         }
 

@@ -22,12 +22,7 @@ public class Blink1 {
 
     static {
 
-        System.loadLibrary("Blink1"); // Load the library
-    }
-
-    public static void usage() {
-
-        System.out.println("Usage: Blink1 <cmd> [options]");
+        System.loadLibrary("blink1"); // Load the library
     }
 
     /**
@@ -36,10 +31,6 @@ public class Blink1 {
     public static void main(String args[]) {
 
         int rc;
-
-        if (args.length == 0) {
-            // usage();
-        }
 
         logger.info("Looking for blink(1) devices...");
         Blink1.enumerate();
