@@ -1,8 +1,8 @@
-deors.services.blink1
+deors-services-blink1
 =====================
 
-Set of REST-like services to control a blink(1) device physically attached to the computer
-running them through the native interface library.
+REST service interface to control a blink(1) device physically attached to the computer
+running these services through the native interface library
 
 Endpoints
 ---------
